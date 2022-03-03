@@ -16,7 +16,7 @@ function parseArgv() {
 module.exports = function (deployer) {
   deployer.then(async () => {
     let params = parseArgv()
-    switch (contract) {
+    switch (params['contract']) {
       case 'blood':
         await deployer.deploy(
           BloodToken,
